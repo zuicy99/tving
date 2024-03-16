@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const BaysicWrap = styled.div`
   position: relative;
-  /* max-width: 1920px; */
+  width: 100%;
   background-color: #000;
 `;
 export const HeaderNav = styled.div`
@@ -17,7 +17,7 @@ export const HeaderNav = styled.div`
   }
   a {
     color: #d9d9d9;
-    font-size: 18px;
+    font-size: 21px;
     padding-right: 30px;
   }
   a :hover {
@@ -30,6 +30,38 @@ export const HeaderNav = styled.div`
     display: flex;
   }
   aside img {
-    width: 33px;
+    width: 35px;
+  }
+
+  @media screen and (max-width: 1724px) {
+    a {
+      font-size: 18px;
+    }
+    a img {
+    }
+    aside img {
+      width: 32px;
+    }
+  }
+  // 테블릿
+  @media screen and (max-width: 1024px) {
+    a {
+      font-size: 15px;
+    }
+    a img {
+      width: 26px;
+    }
+    aside img {
+      width: 26px;
+    }
+  }
+  // 모바일
+  @media screen and (max-width: 767px) {
+    a {
+      font-size: 13px;
+    }
+    aside img {
+      width: 22px;
+    }
   }
 `;
