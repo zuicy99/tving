@@ -7,5 +7,5 @@
 - prettier
 - react-router
 - react-router-dom
-- axios
+- swiper
 # tving
