@@ -3,7 +3,7 @@ import BasicHeader from "./BasicHeader";
 import styled from "@emotion/styled";
 import BasicFooter from "./BasicFooter";
 
-const BasicLayout = ({ Children }) => {
+const BasicLayout = ({ children }) => {
   //   const Warp = styled.div`
   //     max-width: 1280px;
   //     background: darkblue;
@@ -15,7 +15,7 @@ const BasicLayout = ({ Children }) => {
       <header>
         <BasicHeader />
       </header>
-      <main>{Children}</main>
+      <main>{children}</main>
       <footer>
         <BasicFooter />
       </footer>
