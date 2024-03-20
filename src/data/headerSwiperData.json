@@ -2,6 +2,7 @@
   {
     "link": "/",
     "imageSrc": "images/m5.webp",
+    "tag": 0,
     "titleImageSrc": "images/m5title.webp",
     "subtitle1": "김수현 xdd 김지원, 3년 차 부부의",
     "subtitle2": "아찔한 로맨틱 코미디 드라마"
@@ -15,6 +16,7 @@
   },
   {
     "link": "/",
+    "tag": 1,
     "imageSrc": "images/m2.webp",
     "titleImageSrc": "images/m2title.webp",
     "subtitle1": "“넌 내가 잘 지내 보여?”",
@@ -22,9 +24,18 @@
   },
   {
     "link": "/",
+    "tag": 1,
     "imageSrc": "images/m6.webp",
     "titleImageSrc": "images/m6title.webp",
     "subtitle1": "등급이 떨어지는 순간, 왕따가 된다",
+    "subtitle2": "서바이벌 서열 전쟁 드라마"
+  },
+  {
+    "link": "/",
+    "tag": 1,
+    "imageSrc": "images/m7.webp",
+    "titleImageSrc": "images/m7title.webp",
+    "subtitle1": "'싱어게인3' TOP 7의",
     "subtitle2": "서바이벌 서열 전쟁 드라마"
   }
 ]
