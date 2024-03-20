@@ -1,0 +1,30 @@
+[
+  {
+    "link": "/",
+    "imageSrc": "images/m5.webp",
+    "titleImageSrc": "images/m5title.webp",
+    "subtitle1": "김수현 xdd 김지원, 3년 차 부부의",
+    "subtitle2": "아찔한 로맨틱 코미디 드라마"
+  },
+  {
+    "link": "/",
+    "imageSrc": "images/m5.webp",
+    "titleImageSrc": "images/m5title.webp",
+    "subtitle1": "김수현 x 김지원, 3년 차 부부의",
+    "subtitle2": "아찔한 로맨틱 코미디 드라마"
+  },
+  {
+    "link": "/",
+    "imageSrc": "images/m2.webp",
+    "titleImageSrc": "images/m2title.webp",
+    "subtitle1": "“넌 내가 잘 지내 보여?”",
+    "subtitle2": "오해와 상처로 얼룩진 밤"
+  },
+  {
+    "link": "/",
+    "imageSrc": "images/m6.webp",
+    "titleImageSrc": "images/m6title.webp",
+    "subtitle1": "등급이 떨어지는 순간, 왕따가 된다",
+    "subtitle2": "서바이벌 서열 전쟁 드라마"
+  }
+]
