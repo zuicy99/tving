@@ -24,12 +24,12 @@ export const HeaderNav = styled.div`
     color: #fff;
     /* color: black; */
   }
-  aside {
+  .right-nav {
     justify-content: center;
     align-items: center;
     display: flex;
   }
-  aside img {
+  .right-nav img {
     width: 35px;
   }
 
@@ -62,6 +62,87 @@ export const HeaderNav = styled.div`
     }
     aside img {
       width: 22px;
+    }
+  }
+`;
+
+export const FooterInfo = styled.div`
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  border-top: 0.083rem solid rgb(33, 33, 33);
+
+  .foterdd {
+    display: flex;
+    justify-content: space-between;
+    height: 71px;
+  }
+  .left-nav {
+    display: flex;
+    align-items: center;
+    a {
+      color: #a3a3a3;
+      font-size: 17px;
+      padding-right: 30px;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+  }
+  aside {
+    align-items: center;
+    display: flex;
+    a {
+      color: #a3a3a3;
+      font-size: 17px;
+      padding-right: 30px;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+  }
+
+  .copyright-box {
+    padding-bottom: 25px;
+    span {
+      position: relative;
+      color: #6e6e6e;
+      font-size: 14px;
+      padding: 0 6px;
+      &:last-child::after {
+        content: none;
+      }
+    }
+
+    span::after {
+      content: "|";
+      position: absolute;
+      right: 0;
+    }
+
+    a {
+      color: #6e6e6e;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+
+  .sns-bt {
+    display: flex;
+
+    a {
+      margin-right: 10px;
+      height: 40px;
+      width: 40px;
+      background: gray;
+      border-radius: 50%; /* 반지름이 이미지 영역의 절반인 50%로 설정하여 동그란 원을 만듭니다. */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;

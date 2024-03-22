@@ -1,7 +1,12 @@
 import React from "react";
 
 import { IoSearchOutline } from "react-icons/io5";
-import { BaysicWrap, HeaderNav } from "./style/BaysicCss";
+import {
+  BaysicWrap,
+  FooterInfo,
+  FooterNav,
+  HeaderNav,
+} from "./style/BaysicCss";
 import styled from "@emotion/styled";
 import { CiInstagram } from "react-icons/ci";
 import {
@@ -12,89 +17,9 @@ import {
 } from "react-icons/fa6";
 
 const BasicFooter = () => {
-  const FooterNav = styled.div`
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1800px;
-    margin: 0 auto;
-    border-top: 0.083rem solid rgb(33, 33, 33);
-
-    .foterdd {
-      display: flex;
-      justify-content: space-between;
-      height: 71px;
-    }
-    .left-nav {
-      display: flex;
-      align-items: center;
-      a {
-        color: #a3a3a3;
-        font-size: 17px;
-        padding-right: 30px;
-        transition: color 0.3s;
-      }
-      a:hover {
-        color: #ffffff;
-      }
-    }
-    aside {
-      align-items: center;
-      display: flex;
-      a {
-        color: #a3a3a3;
-        font-size: 17px;
-        padding-right: 30px;
-        transition: color 0.3s;
-      }
-      a:hover {
-        color: #ffffff;
-      }
-    }
-
-    .copyright-box {
-      padding-bottom: 25px;
-      span {
-        position: relative;
-        color: #6e6e6e;
-        font-size: 14px;
-        padding: 0 6px;
-        &:last-child::after {
-          content: none;
-        }
-      }
-
-      span::after {
-        content: "|";
-        position: absolute;
-        right: 0;
-      }
-
-      a {
-        color: #6e6e6e;
-        font-size: 14px;
-        text-decoration: underline;
-      }
-    }
-
-    .sns-bt {
-      display: flex;
-
-      a {
-        margin-right: 10px;
-        height: 40px;
-        width: 40px;
-        background: gray;
-        border-radius: 50%; /* 반지름이 이미지 영역의 절반인 50%로 설정하여 동그란 원을 만듭니다. */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  `;
   return (
     <BaysicWrap>
-      <FooterNav>
+      <FooterInfo>
         <div className="foterdd">
           <div className="left-nav">
             <span>
@@ -207,7 +132,7 @@ const BasicFooter = () => {
             />
           </a>
         </div>
-      </FooterNav>
+      </FooterInfo>
     </BaysicWrap>
   );
 };

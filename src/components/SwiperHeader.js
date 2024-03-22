@@ -1,78 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import Swiper core and required modules
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useRef } from "react";
-import styled from "@emotion/styled";
+
 import { Link } from "react-router-dom";
 
 import HeaderSwiperData from "../data/headerSwiperData.json";
+import { HeaderContiner } from "../styles/swiper/headerSwiperCss";
 
 const SwiperHeader = () => {
-  const Continer = styled.div`
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .swiper-pagination-bullet {
-      background-color: #fff;
-      position: relative;
-      left: 42%;
-      top: -30px;
-    }
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      color: #fff;
-    }
-    .header-Swiper-title {
-      position: absolute;
-      top: 60%; /* 원하는 위치로 조절 */
-      left: 2%;
-      text-align: left;
-      svg {
-        width: 5.07vw;
-        height: auto;
-        margin-bottom: 10px;
-      }
-      img {
-        width: 23.07vw;
-      }
-      .title-info {
-        padding-top: 20px;
-      }
-      p {
-        color: #fff;
-        font-size: 1.3vw;
-      }
-    }
-  `;
-
   return (
-    <Continer>
+    <HeaderContiner>
       <Swiper
         spaceBetween={20}
         slidesPerView={1.1}
@@ -86,7 +29,7 @@ const SwiperHeader = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="swiper-haeder"
       >
         {HeaderSwiperData.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -128,7 +71,7 @@ const SwiperHeader = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Continer>
+    </HeaderContiner>
   );
 };
 
