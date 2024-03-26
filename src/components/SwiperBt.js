@@ -6,28 +6,46 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export const BtContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 500px;
-  max-width: 2200px;
-  margin: 0 auto;
+  /* overflow: hidden; */
   overflow: hidden;
 
-  .bt-motion {
+  .swiper-bt-wrap {
+    width: 100%;
     position: relative;
     display: flex;
-    margin: 0 auto;
-    /* width: 1.63vw; */
-    height: 5.27vw; /* 슬라이드의 높이를 조절 */
     align-items: center;
-    justify-content: center;
+    /* height: 500px; */
+    margin: 0 auto;
+    padding: 65px;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      color: #fff;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+        opacity: 1;
+      }
+    }
+  }
+  .bt-motion {
+    position: relative;
+    height: 5.27vw;
+    display: flex; /* 이미지를 수직 중앙 정렬하기 위해 추가 */
+    align-items: center; /* 이미지를 수직 중앙 정렬하기 위해 추가 */
+    justify-content: center; /* 이미지를 수평 중앙 정렬하기 위해 추가 */
     background-color: gray;
     background-image: linear-gradient(180deg, rgba(38, 38, 38, 0), #191919);
     background-size: cover;
     transition: filter 0.2s, transform 0.2s ease-in-out;
     border-radius: 10px;
     transform: translateY(0);
+
     img {
       width: 8.33vw;
       height: auto;

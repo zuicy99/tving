@@ -9,7 +9,7 @@ export const HeaderNav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
+  width: 93%;
   margin: 0 auto;
   .left-nav {
     display: flex;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const HeaderContiner = styled.div`
-  .swiper-haeder {
+  .swiper-header {
     width: 100%;
     height: 100%;
   }

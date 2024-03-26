@@ -1,0 +1,13 @@
+.wrap {
+  position: relative;
+  width: 2000px;
+  background: #000;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}

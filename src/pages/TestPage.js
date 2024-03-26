@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { IoSearchOutline } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa6";
@@ -19,8 +19,33 @@ import { HeaderContiner } from "../styles/swiper/headerSwiperCss";
 import BtSwiperData from "../data/btSwiperData.json";
 import { BtContainer } from "../components/SwiperBt";
 import { CardContainer } from "../styles/swiper/cardSwiper";
+import {
+  DropdownButton,
+  DropdownContent,
+  DropdownWrapper,
+  ItemBack,
+} from "../styles/dropCss";
 
 const TestPage = () => {
+  // const [isFirstSlide, setIsFirstSlide] = useState(true);
+  // const [isLastSlide, setIsLastSlide] = useState(false);
+  const swiperNavPreRef = useRef(null);
+  const swiperNavNextRef = useRef(null);
+
+  const [open, setOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setOpen(!open);
+  };
+
+  const handleMouseEnter = () => {
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setOpen(false);
+  };
+
   return (
     <BaysicWrap>
       <HeaderNav>
@@ -46,9 +71,41 @@ const TestPage = () => {
           <a href="" style={{ fontSize: "30px", paddingTop: "5px" }}>
             <IoSearchOutline />
           </a>
-          <a href="">
-            <img src="images/usericon.png" />
-          </a>
+          <DropdownWrapper>
+            <DropdownButton
+              onClick={toggleDropdown}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img src="images/usericon.png" alt="User Icon" />
+            </DropdownButton>
+
+            <DropdownContent className="dropdown-content">
+              <div className="profile">
+                <div>
+                  <img src="images/usericon.png" alt="User Icon" />
+                </div>
+                <div>
+                  <p>김주영</p>
+                  <a className="profile-a">프로필 전환 &gt;</a>
+                </div>
+              </div>
+              <ItemBack>
+                <a className="drop-item" href="#home">
+                  MY
+                </a>
+                <a className="drop-item" href="#about">
+                  이용권
+                </a>
+                <a className="drop-item" href="#contact">
+                  고객센터
+                </a>
+                <a className="drop-item" href="#contact">
+                  로그아웃
+                </a>
+              </ItemBack>
+            </DropdownContent>
+          </DropdownWrapper>
         </div>
       </HeaderNav>
       <main>
@@ -66,7 +123,7 @@ const TestPage = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="swiper-haeder"
+            className="swiper-header"
           >
             {HeaderSwiperData.map((slide, index) => (
               <SwiperSlide key={index}>
@@ -114,8 +171,16 @@ const TestPage = () => {
           <Swiper
             slidesPerView={5}
             spaceBetween={15}
-            pagination={{ clickable: true }}
-            className="swiper-main-bt"
+            freeMode={true}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            className="swiper-bt-wrap"
+            modules={[Autoplay, Navigation, Pagination]}
             style={{ overflow: "visible", width: "100%" }}
           >
             {BtSwiperData.map((slide, index) => (
@@ -136,9 +201,9 @@ const TestPage = () => {
         <CardContainer>
           <p>오늘의 Top20</p>
           <Swiper
-            slidesPerView={5}
+            slidesPerView={6.1}
             spaceBetween={15}
-            navigation={true}
+            // navigation={true}
             pagination={{ clickable: true }}
             className="swiper-main-bt"
             style={{ overflow: "visible", width: "100%" }}
